@@ -1,2 +1,2 @@
-# WEB-P-D
+# WEB-PandD
 Welcome to Web-programming and web-design;
