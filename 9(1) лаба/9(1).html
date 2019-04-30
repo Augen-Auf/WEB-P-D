@@ -1,0 +1,95 @@
+﻿<html>
+   <head>
+      <title>Художники</title>
+      <link rel=stylesheet href="9.(1).css">
+   </head>
+   <body>
+   <script>
+       function changeName() {
+    var name = document.getElementById("nameOfArt").options[document.getElementById("nameOfArt").selectedIndex].value;
+}
+       function getText() {
+    var info = document.getElementById("info");
+    document.getElementById('mainText').innerHTML = document.getElementById('info').value;
+}
+       function bPic() {
+    var imgPic = new Array();
+    imgPic[0] = new Image();
+    imgPic[0].src = 'pic1.jpg';
+    imgPic[1] = new Image();
+    imgPic[1].src = 'pic2.jpg';
+    imgPic[2] = new Image();
+    imgPic[2].src = 'pic3.jpg';
+    var picCheck = document.getElementsByName('backPic');
+    for(var i=0; i<picCheck.length;i++) {
+        if(picCheck[i].checked) {
+            document.getElementById('picture').src = imgPic[i].src;
+            document.getElementById('picture').style.display="block";
+            }
+    }
+}
+       function pickTextDec() {
+    var textDecor = document.getElementsByName('decorT');
+    var decor = ['font-style:italic','text-decoration:underline','font-weight:bold'];
+    document.getElementById('objectResult').style.cssText =""; 
+    for(var j = 0;j < textDecor.length;j++){
+        if(textDecor[j].checked)
+           document.getElementById('objectResult').style.cssText += decor[j]; 
+           document.getElementById('objectResult').style.display="none";
+        }
+}
+       function show() {
+    document.getElementById('objectResult').style.display = "block";
+    var divBlock= document.getElementById('objectResult').outerHTML;
+    var newWindow = window.open('','','width=500, height=450','resizable = no');
+    var docWindow = newWindow.document;
+    docWindow.open();
+    docWindow.write('<head><meta charset="UTF-8"><link rel="stylesheet" type="text/css" href="9.(1).css"><title>Результат</title></head><body>');
+    docWindow.write(divBlock);
+    docWindow.write('</body></html>');
+    docWindow.close(); 
+}
+       function resetBlock()
+       {
+           document.getElementById('objectResult').style.display = "none";}
+   </script> <form name="artists">
+        <div id="block">
+        <h2>Страничка по заказу</h2>
+        <fieldset>
+            <legend class="legend">Параметры страницы</legend>
+        Художник:
+        <select id = "nameOfArt" onchange="changeName()">
+           <option value="И.К.Айвазовский">И.К.Айвазовский</option>
+           <option value="И.Е.Репин">И.Е.Репин</option>
+           <option value="В.И.Суриков">В.И.Суриков</option>
+       </select><br>
+        Подпись:
+        <input type="text" id="info" name="inform" onblur="getText()"><br>
+       <div class="block1">Картинка для фона<br>
+        <div id="pic" onchange="bPic()">
+            <input type="radio" name="backPic">fon1.jpg<br>
+            <input type="radio" name="backPic">fon2.jpg<br>
+            <input type="radio" name="backPic">fon3.jpg<br>
+        </div>
+       </div>
+        <div class = "block2">
+        Параметры текста<br>
+        <div id="text" onchange="pickTextDec()">
+        <input type="checkbox" name="decorT">Курсив/нет<br>
+        <input type="checkbox" name="decorT">Подчеркивание/нет<br>
+        <input type="checkbox" name="decorT">Жирный/нет<br>
+        </div>
+        </div>
+        </fieldset>
+        <input id="subButton" type="button" onClick="show()" value="Показать"> 
+        <input id="reset" type="reset" value="Сброс" onClick="resetBlock()"> 
+        </div>
+        </form>
+        <div id="objectResult"style="display:none;">
+        <div id="mainText" class="forUnderLine"></div>
+        <img id="picture" style="display:none;" width="250">
+        <div id="decorations"></div>
+        </div>
+   </body>
+</html>
+       

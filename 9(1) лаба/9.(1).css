@@ -1,0 +1,79 @@
+
+#block {
+margin-left:auto;
+margin-right: auto;
+width:500px;
+height:450px;
+background-color:peachpuff;
+border: 2px solid springgreen;
+    line-height: 25px;
+    font-size:18px;
+    padding:15px;
+}
+h2 {
+text-align: center;
+color: #50c76d;
+}
+.legend {
+border-color:white;
+font-weight:bold;
+}
+.block1 
+{
+    position: relative;
+    left:30px;
+    top:40px;
+}
+.block2
+{
+    position:relative;
+    left:270px;
+    bottom:58px;
+}
+#subButton {
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  padding: .5em 2em;
+  border: 2px solid;
+  border-radius: 1px;
+  background-color: #50c76d;
+  position: relative;
+  left: 60px;
+  top:30px;
+  width: 120px;
+}
+#reset {
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  width: 120px;
+  padding: .5em 2em;
+  border: 2px solid;
+  border-radius: 1px;
+  background-color: #50c76d;
+  position: relative;
+  left: 200px;
+  top:30px;
+}
+#objectResult{
+    width: 500px;
+    height: 450px;
+    background-image: url(fon.jpg); 
+    font-size: 40px;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#picture {
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    top:20px;
+}
+.forUnderLine{
+    padding-bottom:5px;
+}    
+fieldset {
+    border:2px solid white;
+}
