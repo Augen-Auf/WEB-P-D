@@ -2,7 +2,7 @@ document.body.onmouseover = document.body.onmouseout = mouse;
 function mouse (event)
 {
     let el = event.target;
-    let image = document.getElementById('mouse');
+    let image = document.getElementById('blockOfPick');
     if(event.type == "mouseover" && el.tagName == "TD") {
         if(el.innerText == "Слон") {
             image.src = "1.jpg";
@@ -27,58 +27,55 @@ function mouse (event)
 var setTime;
 var indexImg = 0;
 function nextPic(){
-    var img = document.getElementById('mouse');
-    var transition = document.getElementsByClassName("chooseAnimal");
+    var img = document.getElementById('blockOfPick');
     if(indexImg == 0 || indexImg == 5) {
         indexImg = 1;
         img.src = `${indexImg}.jpg`;
-        transition[indexImg-1].classList.toggle("chooseAnimal");
     } else if(indexImg == 1){
         indexImg++;
         img.src = `${indexImg}.jpg`;
-        transition[indexImg-2].classList.toggle("chooseAnimal");
-        transition[indexImg-1].classList.toggle("chooseAnimal");
     } else if(indexImg == 2){
         indexImg++;
         img.src = `${indexImg}.jpg`;
-        transition[indexImg-2].classList.toggle("chooseAnimal");
-        transition[indexImg-1].classList.toggle("chooseAnimal");
     } else if(indexImg == 3){
         indexImg++;
         img.src = `${indexImg}.jpg`;
-        transition[indexImg-2].classList.toggle("chooseAnimal");
-        transition[indexImg-1].classList.toggle("chooseAnimal");
-    } else if(indexImg == 4 || indexImg == -1){
+    } else if(indexImg == 4){
         indexImg++;
         img.src = `${indexImg}.jpg`;
-        transition[indexImg-2].classList.toggle("chooseAnimal");
-        transition[indexImg-1].classList.toggle("chooseAnimal");
+    }
+}  
+function backPic(){
+    var img = document.getElementById('blockOfPick');
+    if(indexImg == 0 || indexImg == 1) {
+        indexImg = 5;
+        img.src = `${indexImg}.jpg`;
+    } else if(indexImg == 2){
+        indexImg--;
+        img.src = `${indexImg}.jpg`;
+    } else if(indexImg == 3){
+        indexImg--;
+        img.src = `${indexImg}.jpg`;
+    } else if(indexImg == 4){
+        indexImg--;
+        img.src = `${indexImg}.jpg`;
+    }
+    else if(indexImg == 5){
+        indexImg--;
+        img.src = `${indexImg}.jpg`;
     }
 }  
 function start()
 {
     nextPic();
-    setTime = setInterval(nextPic,2000);
+}
+function carousel()
+{
+    nextPic();
+    setTime = setInterval(nextPic,3000);
 }
 function stop()
 {
-    var img = document.getElementById("mouse");
-    var transition = document.getElementsByClassName("chooseAnimal");
     clearInterval(setTime);
-    if(indexImg = 0)
-    {
-        image.src = "5.jpg";
-        transition[0].classList.toggle("chooseAnimal");
-        transition[4].classList.toggle("chooseAnimal");
-        clearInterval(setTime);
-        indexImg = 5;
-    }
-    else 
-    {
-		image.src = `${indexImg-1}.jpg`;
-		transition[indexImg-2].classList.toggle("chooseAnimal");
-		transition[indexImg-1].classList.toggle("chooseAnimal");
-		clearInterval(setTime);
-		indexImg--;
-	}
+    backPic();
 }

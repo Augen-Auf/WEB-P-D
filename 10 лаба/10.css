@@ -16,3 +16,24 @@ img{
 	height: 500px;
 	margin: 30px auto;
 }
+#startButton {
+	height: 40px;
+	position: relative;
+	left:90px;
+	width:100px;
+	top:50px;
+}
+#carouselButton {
+	height: 40px;
+	position: relative;
+	left:115px;
+	width:100px;
+	top:50px;
+}
+#stopButton {
+	height: 40px;
+	position: relative;
+	left:140px;
+	width: 100px;
+	top:50px;
+}
