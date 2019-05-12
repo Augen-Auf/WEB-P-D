@@ -1,18 +1,26 @@
-/*#contacts {
-    border: 1px solid black;
-    width: 168px;
-    height: 30px;
-}*/
-/*#contact {
-    border: 1px solid black;
-    width: 170px;
-    height: 30px;
-}*/
+
 #block {
     margin-left:auto;
     margin-right:auto;
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+    padding:15px;
 }
 img {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left:150px;
+    top:5px;
+}
+li {
+    list-style-type: none;
+}
+#contact {
+    width: 395px;
+}
+hr{
+    background-color:black;
+    width: 400px;
 }

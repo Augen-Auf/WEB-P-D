@@ -1,13 +1,14 @@
 <html>
    <head>
-      <title>Динамический список</title>
-      <link rel=stylesheet href="11.css">
-   </head>
-   <body>
-   <script type="text/javascript" src="11.js"></script>
-   <div id="block">
-   <input type=text id="contact" placeholder ="Введите новый контакт" onchange="enter()"><br>
-   <div id="contacts" style="display:none;"></div>
-   </div>
+         <title>Динамический список</title>
+         <link rel=stylesheet href="11.css">
+         <script type="text/javascript" src="11.js"></script>
+         <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      </head>
+      <body>
+         <div id="block">
+            <input type=text id="contact" placeholder ="Введите новый контакт" onkeyup="enter(event)"><br>
+            <div id="contacts" style="display:none;"></div>
+         </div>
    </body>
-   </html>
+</html>
