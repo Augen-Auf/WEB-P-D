@@ -30,39 +30,39 @@ function nextPic(){
     var img = document.getElementById('blockOfPick');
     if(indexImg == 0 || indexImg == 5) {
         indexImg = 1;
-        img.src = `${indexImg}.jpg`;
+        img.src = `1.jpg`;
     } else if(indexImg == 1){
         indexImg++;
-        img.src = `${indexImg}.jpg`;
+        img.src = `2.jpg`;
     } else if(indexImg == 2){
         indexImg++;
-        img.src = `${indexImg}.jpg`;
+        img.src = `3.jpg`;
     } else if(indexImg == 3){
         indexImg++;
-        img.src = `${indexImg}.jpg`;
+        img.src = `4.jpg`;
     } else if(indexImg == 4){
         indexImg++;
-        img.src = `${indexImg}.jpg`;
+        img.src = `5.jpg`;
     }
 }  
 function backPic(){
     var img = document.getElementById('blockOfPick');
     if(indexImg == 0 || indexImg == 1) {
         indexImg = 5;
-        img.src = `${indexImg}.jpg`;
+        img.src = `5.jpg`;
     } else if(indexImg == 2){
         indexImg--;
-        img.src = `${indexImg}.jpg`;
+        img.src = `1.jpg`;
     } else if(indexImg == 3){
         indexImg--;
-        img.src = `${indexImg}.jpg`;
+        img.src = `2.jpg`;
     } else if(indexImg == 4){
         indexImg--;
-        img.src = `${indexImg}.jpg`;
+        img.src = `3.jpg`;
     }
     else if(indexImg == 5){
         indexImg--;
-        img.src = `${indexImg}.jpg`;
+        img.src = `4.jpg`;
     }
 }  
 function start()
