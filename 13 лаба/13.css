@@ -1,0 +1,41 @@
+#field {
+    width: 408px;
+    height: 400px;
+    margin: auto;
+}
+#field div {
+    width: 100px;
+    height: 100px;
+    border:1px solid black;
+    cursor: pointer;
+    float: left;
+    
+}
+#startFon {
+    width: 250px;
+    height: 250px;
+    margin:auto;
+    background: #22a05b; 
+    padding:20px;
+    opacity:1;
+    text-align: center;
+    
+    
+}
+.start{
+    background: #2bc671; 
+    opacity: 0.8;
+    z-index:2;
+}
+.main, .start{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+#startButton {
+height: 50px;
+width: 105px;
+}
